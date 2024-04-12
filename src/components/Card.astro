@@ -1,13 +1,18 @@
 ---
 const Tarjeta = "div";
 const Container = "div";
+export interface Props{
+    nombre: string;
+    ocupacion?: string; // el signo ? indica que la propiedad no es mandatoria
+}
+const {nombre, ocupacion="Ocupación sin definir"} = Astro.props; // ocupacion tiene un valor por defecto
 ---
 
 <Tarjeta class="card">
     <img src="images/avatar1.png" alt="imagen" style = "width:50%" />
     <Container class="container">
-        <h4>Pedro</h4>
-        <p>Ingeniero de software</p>
+        <h4>{nombre}</h4>
+        <p>{ocupacion}</p>
     </Container>
 </Tarjeta>
 
@@ -18,6 +23,7 @@ const Container = "div";
         margin-left: 50px;
         width: 15%;
         margin-bottom: 15px;
+        padding: 20px;
     }
     .card:hover{
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
