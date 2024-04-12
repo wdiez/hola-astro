@@ -7,6 +7,12 @@ import Card from '../components/Card.astro';
 <Layout title="Bienvenido a Astro.">
 	<Titulo />
 	<Card nombre="Luis" ocupacion="Ing. Software" avatar={true}/>
-	<Card nombre="Sandra" avatar={false}/>
+	<Card nombre="Sandra" avatar={false}>
+		<p slot="desc">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eligendi optio pariatur fugiat. 
+			Amet, autem laboriosam. Deleniti, est quasi officia dicta temporibus harum laudantium saepe 
+			aspernatur corrupti voluptatibus odit dolor!
+		</p>
+	</Card>
 </Layout>
 

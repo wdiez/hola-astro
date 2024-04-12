@@ -14,6 +14,9 @@ const {nombre, ocupacion="Ocupación sin definir", avatar} = Astro.props; // ocu
     <Container class="container">
         <h4>{nombre}</h4>
         <p>{ocupacion}</p>
+        <slot name="desc">
+            <p>Contenido default de la descripción</p> <!--Parrafo default por si no escribimos nada -->
+        </slot>
     </Container>
 </Tarjeta>
 
