@@ -2,13 +2,14 @@
 import Layout from "../../layouts/Layout.astro";
 import Layaut from "../../layouts/Layout.astro";
 
-export function getStaticPaths(){
-    return [
-        {params:{id: '123'}},
-        {params:{id: '123456'}},
-        {params:{id: '123_hola'}},
-    ]
-}
+//comentado para realizar rutas dinámicas
+// export function getStaticPaths(){
+//     return [
+//         {params:{id: '123'}},
+//         {params:{id: '123456'}},
+//         {params:{id: '123_hola'}},
+//     ]
+// }
 
 const {id} = Astro.params;
 ---
